@@ -37,14 +37,24 @@ GET /api?channel=your_channel_name&uid=user_id
 ```
 
 Required query parameters:
-- `channel`: The channel name
-- `uid`: The user ID (numeric)
+- `channel`: The channel name (defaults to '7d72365eb983485397e3e3f9d460bdda' if not provided)
+- `uid`: The user ID (numeric, defaults to 2882341273 if not provided)
 
 Response:
 ```json
 {
   "token": "generated_agora_token"
 }
+```
+
+Example usage with fetch:
+```javascript
+// Get a token for a specific channel and user
+fetch('https://your-vercel-app.vercel.app/api?channel=test_channel&uid=1234')
+  .then(response => response.json())
+  .then(data => {
+    console.log('Token:', data.token);
+  });
 ```
 
 ## Common Errors

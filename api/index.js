@@ -1,8 +1,8 @@
 const { RtcTokenBuilder, RtcRole } = require('agora-access-token');
 
 module.exports = (req, res) => {
-  const appId = "YOUR_APP_ID";
-  const appCertificate = "YOUR_APP_CERTIFICATE";
+  const appId = process.env.APP_ID;
+  const appCertificate = process.env.APP_CERTIFICATE;
   const channelName = req.query.channel;
   const uid = req.query.uid;
   const role = RtcRole.PUBLISHER;

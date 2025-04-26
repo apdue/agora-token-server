@@ -2,6 +2,6 @@
   "name": "agora-token-server",
   "version": "1.0.0",
   "dependencies": {
-    "agora-token": "^1.0.0"
+    "agora-token": "^2.0.4"
   }
 }
